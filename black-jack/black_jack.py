@@ -25,6 +25,7 @@ def draw(deck):
     return deck.pop()
 
 def hand_value(hand):
+    """calculate the total value of a blackjack hand"""  
     total = sum(VALUE[r] for r, _ in hand)
     aces = sum(1 for r, _ in hand if r == "A")
     # Downgrade Aces from 11 -> 1 until not bust
